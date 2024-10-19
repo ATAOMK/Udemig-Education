@@ -1,0 +1,72 @@
+@import url("./_varilables.scss");
+
+.home {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url("../img/group.jpeg");
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); // Burada saydam siyah renk kullanıyoruz
+      z-index: 1;
+    }
+
+    * {
+        position: relative;
+        z-index: 2;
+      }
+
+
+    h5 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        margin-top: 50px;
+        text-transform: uppercase;
+        color: $main-color;
+        letter-spacing: 6px;
+    }
+
+    h1{
+        font-size: $h1-font;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: $p-font;
+        font-weight: 500;
+        line-height: 30px;
+        margin-bottom: 35px;
+        color: $gray;
+    }
+
+}
+
+
+@media (max-width: 1200px) {
+    .home {
+      .home-text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        h1 {
+          font-size: $h2-font;
+          line-height: 70px;
+        }
+        .btn {
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
